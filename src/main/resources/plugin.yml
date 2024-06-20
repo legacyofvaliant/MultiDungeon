@@ -1,0 +1,25 @@
+name: MultiDungeon
+version: '${project.version}'
+main: net.nutchi.multidungeon.MultiDungeon
+api-version: '1.19'
+depend: [ WorldEdit ]
+commands:
+  multidungeon:
+    aliases: [ md ]
+    permission: multidungeon.command.multidungeon
+    usage: |
+      /<command> create <dungeon>
+      /<command> delete <dungeon>
+      /<command> setPlayerLimit <dungeon> <max>
+      /<command> addReplica <dungeon>
+      /<command> listReplicas <dungeon>
+      /<command> removeReplica <dungeon> <id>
+      /<command> save <dungeon>
+      /<command> finish <dungeon> <id>
+      /<command> playSingle <dungeon> <player>
+      /<command> playMulti <dungeon> <player>
+      /<command> cancelMultiPlayWaiting <player>
+      /<command> execReplicaRelative <player> <command..>
+permissions:
+  multidungeon.command.multidungeon:
+    default: op
